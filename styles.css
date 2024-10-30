@@ -1,120 +1,127 @@
+ /* Clase para bloquear el desplazamiento */
+ body.lock-scroll {
+    overflow: hidden; /* Deshabilita el scroll */
+    position: fixed; /* Mantiene la posición */
+    width: 100%; /* Evita el desbordamiento */
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;700&family=Courier+Prime&display=swap');
 
-    body, html {
-        margin: 0;
-        padding: 0;
-        font-family: 'Montserrat', sans-serif;
-        scroll-behavior: smooth;
-        overflow-x: hidden;
-    }
+body, html {
+margin: 0;
+padding: 0;
+font-family: 'Montserrat', sans-serif;
+scroll-behavior: smooth;
+overflow-x: hidden;
+}
 
-    /* Efecto de partículas flotantes */
-    #particles-js {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
-        z-index: 1;
-        pointer-events: none;
-    }
+/* Efecto de partículas flotantes */
+#particles-js {
+position: absolute;
+width: 100%;
+height: 100%;
+top: 0;
+left: 0;
+z-index: 1;
+pointer-events: none;
+}
 
-    /* Fondo de la página */
-    body {
-        position: relative; /* Asegura que el pseudo-elemento se posicione correctamente */
-    }
+/* Fondo de la página */
+body {
+position: relative; /* Asegura que el pseudo-elemento se posicione correctamente */
+}
 
-    /* Pseudo-elemento para la imagen de fondo */
-    body::before {
-        content: "";
-        background: url('fondo1.png') no-repeat center center fixed;
-        background-size: cover;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        filter: grayscale(100%) brightness(30%); /* Ajusta el brillo a un valor más bajo */
-        z-index: -1;
-    }
+/* Pseudo-elemento para la imagen de fondo */
+body::before {
+content: "";
+background: url('https://raw.githubusercontent.com/captaingorgon55/wrappedusers/main/fondo1.png') no-repeat center center fixed;
+background-size: cover;
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+filter: grayscale(100%) brightness(30%); /* Ajusta el brillo a un valor más bajo */
+z-index: -1;
+}
 
-    /* Sección General */
-    .section {
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 20px;
-        box-sizing: border-box;
-        position: relative;
-        overflow: hidden;
-        background: rgba(0, 0, 0, 0.5); /* Fondo opaco */
-    }
+/* Sección General */
+.section {
+min-height: 100vh;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 20px;
+box-sizing: border-box;
+position: relative;
+overflow: hidden;
+background: rgba(0, 0, 0, 0.5); /* Fondo opaco */
+}
 
-    /* Fondo con gradiente */
-    #header {
-        background: linear-gradient(135deg,#E30613, #000000,#969696,#000000,#E30613);
-        background-size: 400% 400%;
-        animation: gradientShift 15s ease infinite;
-        color: white;
-        text-align: center;
-        position: relative;
-        padding: 50px 20px;
-        overflow: hidden;
-    }
+/* Fondo con gradiente */
+#header {
+background: linear-gradient(135deg,#E30613, #000000,#969696,#000000,#E30613);
+background-size: 400% 400%;
+animation: gradientShift 15s ease infinite;
+color: white;
+text-align: center;
+position: relative;
+padding: 50px 20px;
+overflow: hidden;
+}
 
-    /* Logo centrado */
-    #logo {
-        width: 350px;
-        margin-bottom: 10px;
-        animation: fadeIn 2s ease-in forwards, logoShine 3s ease infinite;
-    }
+/* Logo centrado */
+#logo {
+width: 350px;
+margin-bottom: 10px;
+animation: fadeIn 2s ease-in forwards, logoShine 3s ease infinite;
+}
 
-    /* Título principal con animación secuencial de letras */
-    #main-title {
-        
-        font-family: 'Playfair Display', serif;
-        font-size: 4em;
-        margin-bottom: 10px;
-        color: #fff;
-        opacity: 0;
-        letter-spacing: 0.05em;
-        animation: fadeIn 2s ease-in forwards;
-    }
+/* Título principal con animación secuencial de letras */
+#main-title {
 
-    #subtitle {
-        color: #fff;
-        font-size: 1.5em;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-    }
+font-family: 'Playfair Display', serif;
+font-size: 4em;
+margin-bottom: 10px;
+color: #fff;
+opacity: 0;
+letter-spacing: 0.05em;
+animation: fadeIn 2s ease-in forwards;
+}
+
+#subtitle {
+color: #fff;
+font-size: 1.5em;
+text-transform: uppercase;
+letter-spacing: 2px;
+}
 
 
-  /* Botón */
-  .action-button {
-    font-family: 'Montserrat', sans-serif;
-    background-color: #E30613;
-    border: none;
-    color: white;
-    padding: 15px 30px;
-    font-size: 1.2em;
-    border-radius: 30px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    margin-top: 20px;
-    text-transform: uppercase;
-    background-image: linear-gradient(to right, #E30613, #FF5733); /* Degradado inicial */
-    background-size: 200%; /* Hacemos el fondo más grande para permitir el desplazamiento */
-    position: relative; /* Para asegurar que el botón esté por encima del fondo */
-    z-index: 2; 
+/* Botón */
+.action-button {
+font-family: 'Montserrat', sans-serif;
+background-color: #E30613;
+border: none;
+color: white;
+padding: 15px 30px;
+font-size: 1.2em;
+border-radius: 30px;
+cursor: pointer;
+transition: all 0.3s ease;
+margin-top: 20px;
+text-transform: uppercase;
+background-image: linear-gradient(to right, #E30613, #FF5733); /* Degradado inicial */
+background-size: 200%; /* Hacemos el fondo más grande para permitir el desplazamiento */
+position: relative; /* Para asegurar que el botón esté por encima del fondo */
+z-index: 2; 
 }
 
 
 .action-button:hover {
-    transform: scale(1.1);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-    transition: transform 0.3s ease;
+transform: scale(1.1);
+box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+transition: transform 0.3s ease;
 }
 
 
@@ -125,162 +132,162 @@
 
 
 
-    #profile {
-        background-color: rgba(0, 0, 0, 0.062); /* Mayor opacidad */
-        padding: 50px;
-        text-align: center;
-        box-shadow: 0 10px 30px rgba(255, 255, 255, 0.3);
-        border-radius: 20px;
-        position: relative;
-    }
-        /* Nombre del usuario con efecto de máquina de escribir */
-    #username {
-        font-family: 'Courier Prime', monospace;
-        font-size: 3em;
-        color: #ffffff;
-        margin-bottom: 20px;
-        white-space: nowrap;
-        overflow: hidden;
-        border-right: 1px solid #E30613;
-        max-width: 100%; /* Permite que el ancho se ajuste al contenedor */
-        animation: typing 6s steps(40, end), blink-caret 0.75s step-end infinite; /* Separamos la animación de parpadeo */
-        text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.7); /* Sombra del texto más desenfocada */
-    }
+#profile {
+background-color: rgba(0, 0, 0, 0.062); /* Mayor opacidad */
+padding: 50px;
+text-align: center;
+box-shadow: 0 10px 30px rgba(255, 255, 255, 0.3);
+border-radius: 20px;
+position: relative;
+}
+/* Nombre del usuario con efecto de máquina de escribir */
+#username {
+font-family: 'Courier Prime', monospace;
+font-size: 3em;
+color: #ffffff;
+margin-bottom: 20px;
+white-space: nowrap;
+overflow: hidden;
+border-right: 1px solid #E30613;
+max-width: 100%; /* Permite que el ancho se ajuste al contenedor */
+animation: typing 6s steps(40, end), blink-caret 0.75s step-end infinite; /* Separamos la animación de parpadeo */
+text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.7); /* Sombra del texto más desenfocada */
+}
 
-    /* Descripción del usuario con efecto de máquina de escribir */
-    #user-description {
-        font-family: 'Courier Prime', monospace;
-        color: #fff;
-        font-size: 2em;
-        white-space: nowrap;
-        overflow: hidden;
-        border-right: 3px solid #E30613;
-        max-width: 100%; /* Permite que el ancho se ajuste al contenedor */
-        animation: typingDescription 6s steps(40, end), blink-caret 0.75s step-end infinite; /* Separamos la animación de parpadeo */
-        text-shadow: 4px 4px 8px rgba(0, 0, 0, 1); /* Sombra del texto más desenfocada */
-    }
+/* Descripción del usuario con efecto de máquina de escribir */
+#user-description {
+font-family: 'Courier Prime', monospace;
+color: #fff;
+font-size: 2em;
+white-space: nowrap;
+overflow: hidden;
+border-right: 3px solid #E30613;
+max-width: 100%; /* Permite que el ancho se ajuste al contenedor */
+animation: typingDescription 6s steps(40, end), blink-caret 0.75s step-end infinite; /* Separamos la animación de parpadeo */
+text-shadow: 4px 4px 8px rgba(0, 0, 0, 1); /* Sombra del texto más desenfocada */
+}
 
-    /* Consultas de medios para ajustar el tamaño de la fuente en pantallas pequeñas */
-    @media (max-width: 600px) {
-        #username {
-            font-size: 2em; /* Ajustar el tamaño de fuente para pantallas pequeñas */
-        }
+/* Consultas de medios para ajustar el tamaño de la fuente en pantallas pequeñas */
+@media (max-width: 600px) {
+#username {
+    font-size: 2em; /* Ajustar el tamaño de fuente para pantallas pequeñas */
+}
 
-        #user-description {
-            font-size: 1.5em; /* Ajustar el tamaño de fuente para pantallas pequeñas */
-        }
-    }
+#user-description {
+    font-size: 1.5em; /* Ajustar el tamaño de fuente para pantallas pequeñas */
+}
+}
 
-    /* Efecto de escribir */
-    @keyframes typing {
-        from { width: 0; }
-        to { width: 100%; } /* Mantener al 100% para que el texto completo sea visible */
-    }
+/* Efecto de escribir */
+@keyframes typing {
+from { width: 0; }
+to { width: 100%; } /* Mantener al 100% para que el texto completo sea visible */
+}
 
-    @keyframes typingDescription {
-        from { width: 0; }
-        to { width: 100%; } /* Mantener al 100% para que el texto completo sea visible */
-    }
+@keyframes typingDescription {
+from { width: 0; }
+to { width: 100%; } /* Mantener al 100% para que el texto completo sea visible */
+}
 
-    @keyframes blink-caret {
-        from, to { border-color: transparent; }
-        50% { border-color: #E30613; }
-    }
+@keyframes blink-caret {
+from, to { border-color: transparent; }
+50% { border-color: #E30613; }
+}
 
 
-    @keyframes gradientShift {
-        0% {
-            background-position: 0% 50%;
-        }
-        50% {
-            background-position: 100% 50%;
-        }
-        100% {
-            background-position: 0% 50%;
-        }
-    }
-    
-    @keyframes fadeIn {
-        0% {
-            opacity: 0;
-        }
-        100% {
-            opacity: 1;
-        }
-    }
-  
-    
+@keyframes gradientShift {
+0% {
+    background-position: 0% 50%;
+}
+50% {
+    background-position: 100% 50%;
+}
+100% {
+    background-position: 0% 50%;
+}
+}
+
+@keyframes fadeIn {
+0% {
+    opacity: 0;
+}
+100% {
+    opacity: 1;
+}
+}
+
+
 
 
 /* DISEÑO PAGINA DE PERFIL*/
 
 #achievements {
-    color:white;
-    display: flex;
-    flex-wrap: wrap; /* Permite que las tarjetas se ajusten a múltiples líneas */
-    justify-content: center; /* Centra las tarjetas horizontalmente */
-    gap: 20px; /* Espacio entre las tarjetas */
+color:white;
+display: flex;
+flex-wrap: wrap; /* Permite que las tarjetas se ajusten a múltiples líneas */
+justify-content: center; /* Centra las tarjetas horizontalmente */
+gap: 20px; /* Espacio entre las tarjetas */
 }
 
 .book {
-    position: relative;
-    border-radius: 10px;
-    width: 220px;
-    height: 300px;
-    background-color: whitesmoke;
-    box-shadow: 1px 1px 12px #000;
-    transform: perspective(1000px); /* Añadido para perspectiva en 3D */
-    transition: transform 0.5s; /* Transición suave para el giro */
+position: relative;
+border-radius: 10px;
+width: 200px;
+height: 150px;
+background-color: whitesmoke;
+box-shadow: 1px 1px 12px #000;
+transform: perspective(1000px); /* Añadido para perspectiva en 3D */
+transition: transform 0.5s; /* Transición suave para el giro */
 }
 #achievements-title {
-    color: rgb(255, 255, 255); /* Rojo */
-    font-size: 24px; /* Cambia el tamaño de la fuente si lo deseas */
-    font-weight: bold; /* Puedes poner el texto en negrita */
+color: rgb(255, 255, 255); /* Rojo */
+font-size: 24px; /* Cambia el tamaño de la fuente si lo deseas */
+font-weight: bold; /* Puedes poner el texto en negrita */
 }
 
 
 .achievement-inner {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #000;
-    font-size: 20px;
-    font-weight: bolder;
-    backface-visibility: hidden; /* Oculta la cara posterior al girar */
+position: absolute;
+width: 100%;
+height: 100%;
+border-radius: 10px;
+display: flex;
+align-items: center;
+justify-content: center;
+color: #000;
+font-size: 20px;
+font-weight: bolder;
+backface-visibility: hidden; /* Oculta la cara posterior al girar */
 }
 
 /* Frente del libro */
 .achievement-front {
-    color: rgb(0, 0, 0);
-    background: linear-gradient(to left, rgba(255, 255, 255, 0.822), rgb(216, 214, 214));/* Color de fondo de la parte frontal */
+color: rgb(0, 0, 0);
+background: linear-gradient(to left, rgba(255, 255, 255, 0.822), rgb(216, 214, 214));/* Color de fondo de la parte frontal */
 }
 
 /* Parte trasera del libro */
 .achievement-back {
-    background-color: #f0f0f0; /* Color de fondo de la parte trasera */
-    font-size: 15px;
-    transform: rotateY(180deg); /* Gira la parte posterior para que quede oculta inicialmente */
+background-color: #f0f0f0; /* Color de fondo de la parte trasera */
+font-size: 15px;
+transform: rotateY(180deg); /* Gira la parte posterior para que quede oculta inicialmente */
 }
 
 /* Efecto al pasar el mouse */
 .book:hover {
-    transform: rotateY(20deg); /* Inclina el libro al pasar el mouse */
+transform: rotateY(20deg); /* Inclina el libro al pasar el mouse */
 }
 
 .book:hover .achievement-inner {
-    transition: transform 0.5s; /* Transición suave para el giro */
+transition: transform 0.5s; /* Transición suave para el giro */
 }
 
 .book:hover .achievement-back {
-    transform: rotateY(0deg); /* Muestra la parte trasera al pasar el mouse */
+transform: rotateY(0deg); /* Muestra la parte trasera al pasar el mouse */
 }
 
 .book:hover .achievement-front {
-    transform: rotateY(180deg); /* Oculta la parte delantera al pasar el mouse */
+transform: rotateY(180deg); /* Oculta la parte delantera al pasar el mouse */
 }
 
 
@@ -290,82 +297,81 @@
 
 
 #notes-counter {
-        position: relative; /* Para permitir el uso de pseudo-elementos */
-        padding: 50px;
-        color: white; /* Color del texto */
-        overflow: hidden; /* Asegura que el contenido no sobresalga */
-        z-index: 2; /* Asegúrate de que el contador esté por encima de la nube */
+position: relative; /* Para permitir el uso de pseudo-elementos */
+padding: 50px;
+color: white; /* Color del texto */
+overflow: hidden; /* Asegura que el contenido no sobresalga */
+z-index: 2; /* Asegúrate de que el contador esté por encima de la nube */
 }
 
 /* Fondo de la sección de Contador de Notas */
 .background-notes {
-    content: "";
-    background: url('fondo2.png') no-repeat center center fixed; /* Cambia la imagen de fondo aquí */
-    background-size: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    filter: grayscale(100%) brightness(30%); /* Ajusta el brillo según tus preferencias */
-    z-index: -1; /* Coloca el fondo detrás del contenido */
+content: "";
+background: url('https://raw.githubusercontent.com/captaingorgon55/wrappedusers/main/fondo2.png') no-repeat center center fixed; /* Cambia la imagen de fondo aquí */
+background-size: cover;
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+filter: grayscale(100%) brightness(30%); /* Ajusta el brillo según tus preferencias */
+z-index: -1; /* Coloca el fondo detrás del contenido */
 }
 
 /* Título del contador */
 #notes-counter-title {
-    font-size: 50px;
-    margin-bottom: 10px;
-    position: relative; /* Para asegurar que el título esté por encima del fondo */
-    z-index: 2; /* Asegúrate de que el texto esté por encima del fondo */
+font-size: 50px;
+margin-bottom: 10px;
+position: relative; /* Para asegurar que el título esté por encima del fondo */
+z-index: 2; /* Asegúrate de que el texto esté por encima del fondo */
 }
 
 /* Descripción del contador */
 #notes-counter-description {
-    font-size: 25px;
-    text-align: center; /* Centra el texto */
-    margin-bottom: 15px;
-    z-index: 2; /* Asegúrate de que el texto esté por encima del fondo */
+font-size: 25px;
+text-align: center; /* Centra el texto */
+margin-bottom: 15px;
+z-index: 2; /* Asegúrate de que el texto esté por encima del fondo */
 }
 
 /* Contador de notas */
 #notes-count {
-    font-size: 60px;
-    font-weight: bold;
-    color: #fff; /* Color del texto del contador */
-    position: relative; /* Para asegurar que el contador esté por encima del fondo */
-    z-index: 2; /* Asegúrate de que el texto esté por encima del fondo */
+font-size: 60px;
+font-weight: bold;
+color: #fff; /* Color del texto del contador */
+position: relative; /* Para asegurar que el contador esté por encima del fondo */
+z-index: 2; /* Asegúrate de que el texto esté por encima del fondo */
 }
 
 #word-cloud {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    overflow: hidden; /* Evitar que se desborde */
-    z-index: 1; /* Mantener este z-index para que esté detrás del contador y el botón */
+position: absolute;
+width: 100%;
+height: 100%;
+overflow: hidden; /* Evitar que se desborde */
+z-index: 1; /* Mantener este z-index para que esté detrás del contador y el botón */
 }
 
 
 .word {
-    position: absolute;
-    opacity: 0.2; /* Opacidad baja para efecto de marca de agua */
-    transition: opacity 0.5s ease-out; /* Transición de desvanecimiento */
-    white-space: nowrap; /* Evitar que las palabras se dividan */
+position: absolute;
+opacity: 0.2; /* Opacidad baja para efecto de marca de agua */
+transition: opacity 0.5s ease-out; /* Transición de desvanecimiento */
+white-space: nowrap; /* Evitar que las palabras se dividan */
 }
 
 .word.fade-out {
-    opacity: 0; /* Desvanecer la palabra */
+opacity: 0; /* Desvanecer la palabra */
 }
 
 
 /* Animación para hacer que las palabras suban y desaparezcan */
 @keyframes rise {
-    0% {
-        transform: translateY(100%);
-        opacity: 1;
-    }
-    100% {
-        transform: translateY(-100%);
-        opacity: 0;
-    }
+0% {
+transform: translateY(100%);
+opacity: 1;
 }
-
+100% {
+transform: translateY(-100%);
+opacity: 0;
+}
+}
