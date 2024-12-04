@@ -21346,5 +21346,41 @@
     "profile_message": "Crítico, atraído por los puntos de vista que ayudan a comprender los debates actuales.",
     "name": "Pascual",
     "subscription_date": "11 de marzo del 2024"
+  },
+  {
+    "cx_id": "313ff52c9091a07aa71d7dc3f530fcb8",
+    "section_top_1": "Deportes",
+    "section_top_2": "Bogotá",
+    "section_top_3": "Economía",
+    "notes_count": 416,
+    "total_active_time": 136,
+    "peak_hour": 15,
+    "profile_message": "Competitivo, fascinado por los momentos destacados del mundo del deporte.",
+    "name": "Nicolás",
+    "subscription_date": "1 de enero del 2024"
+  },
+  {
+    "cx_id": "449a41e25b082865d2cee4c0c7afa02f",
+    "section_top_1": "Actualidad",
+    "section_top_2": "Ambiente",
+    "section_top_3": "Bogotá",
+    "notes_count": 7,
+    "total_active_time": 1,
+    "peak_hour": 8,
+    "profile_message": "Interesado, atraído por los temas de interés de esta sección.",
+    "name": "Sebastian",
+    "subscription_date": "1 de enero del 2024"
+  },
+  {
+    "cx_id": "ba7faedbb7b34f3fe4d694f3cde855d3",
+    "section_top_1": "Deportes",
+    "section_top_2": "Bogotá",
+    "section_top_3": "Gastronomía y Recetas",
+    "notes_count": 837,
+    "total_active_time": 266,
+    "peak_hour": 12,
+    "profile_message": "Fanático del deporte, atraído por las historias detrás de las grandes competiciones.",
+    "name": "Jhonatan",
+    "subscription_date": "1 de enero del 2024"
   }
 ]
